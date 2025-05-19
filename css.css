@@ -1,0 +1,146 @@
+/* Custom styles on top of Bootstrap */
+
+/* Basic body styling */
+body {
+    background: linear-gradient(135deg, #2a2d3e, #1a1c27);
+    min-height: 100vh;
+    transition: background 0.3s ease;
+}
+
+/* Login container styling */
+.login-container {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Logo styling */
+.logo-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-size: 40px;
+    color: #2196f3;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Brand and title styling */
+.brand-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2196f3;
+    margin-bottom: 5px;
+}
+
+.login-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Form input styling */
+.form-control:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 0 0.25rem rgba(33, 150, 243, 0.25);
+}
+
+/* Button styling */
+.login-btn {
+    padding: 12px;
+    background-color: #2196f3;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(3px, 0, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .login-container {
+        border-radius: 0;
+        box-shadow: none !important;
+    }
+    
+    body {
+        background: var(--bs-body-bg);
+    }
+}
+
+/* Input focus states */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(33, 150, 243, 0.25);
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state for button */
+.login-btn .spinner-border {
+    margin-left: 8px;
+}
